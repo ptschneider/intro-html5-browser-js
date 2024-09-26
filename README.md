@@ -2,6 +2,8 @@
 
 a simple intro to programming with a modern browser
 
+there are plenty of online language references; too many actual examples still use jquery. c'mon, man.
+
 ## mix of static elements and dynamic elements
 
 It's not <i>if</i> either-or, but <i>when</i>. You will certainly have some static tags to start, and you might augment that dynamically via script. (The EJS template engine for Express.js is a nice automation for both when using Express.js for your web server.)
