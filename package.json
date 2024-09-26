@@ -1,0 +1,28 @@
+{
+  "name": "intro-html5-browser-js",
+  "version": "2.0.0",
+  "private": true,
+  "description": "simple html5 + Node.js example",
+  "keywords": [
+    ""
+  ],
+  "license": "MIT",
+  "author": "P.T. Schneider",
+  "scripts": {
+    "test": "echo \"Error: no unit tests defined\" && exit 1",
+    "start": "webpack serve --open --config webpack.config.dev.js",
+    "build-wp": "webpack --config webpack.config.prod.js",
+    "build-wd": "webpack --config webpack.config.dev.js",
+    "build-sass": "npx sass --quiet-deps --silence-deprecation mixed-decls  testyle.sass css/testyle.css"
+  },
+  "sneaky_comment01": "n.b. this config is simple, the only deps below are related to development",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0",
+    "sass": "^1.77.8"
+  }
+}

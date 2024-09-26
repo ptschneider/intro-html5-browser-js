@@ -1,0 +1,142 @@
+//@import "../../node_modules/bootstrap/scss/bootstrap"
+//$theme-root-L: 45%
+//$theme-root-C: 35%
+//$theme-root-H: 100 /* 75: ok, except bad accent1 and primary-right;120 good */
+//$theme-root-color: lch($theme-root-L $theme-root-C $theme-root-H)
+
+//$brand-root: lch(45% 15% 75)
+//$brand-gray: rgb(180 180 200)
+//$brand-light: color-mix(in srgb, $brand-root, $brand-gray)
+//$secondary: color-mix(in srgb, $brand-root, coral)
+//$secondary-light: color-mix(in srgb, $secondary, $brand-gray)
+//$mix-warm: rgb(150 40 30)
+//$mix-cool: rgb(30 40 150)
+
+@function complementary($hue)
+  @return $hue + 180
+
+@function rightAnalogue($hue)
+  @return $hue + 30
+
+@function leftAnalogue($hue)
+  @return $hue - 30
+
+$brand-gray: #f0f0f0
+$brand_H_primary: 88
+$brand_L_primary: 45%
+$brand_C_primary: 35%
+$brand_H_primary_right: rightAnalogue($brand_H_primary)
+$brand_H_primary_left: leftAnalogue($brand_H_primary)
+$brand_H_secondary: complementary($brand_H_primary)
+$brand_H_secondary_right: rightAnalogue($brand_H_secondary)
+$brand_H_secondary_left: leftAnalogue($brand_H_secondary)
+
+$brand_primary: lch(50% 30% $brand_H_primary)
+$brand_primary_left: lch(60% 30% $brand_H_primary_left)
+$brand_primary_right: lch(60% 30% $brand_H_primary_right)
+$brand_primary_dark500: lch(30% 20% $brand_H_primary)
+$brand_primary_dark600: lch(20% 20% $brand_H_primary)
+
+$brand_secondary: lch(20% 25% $brand_H_secondary)
+$brand_secondary_left: lch(60% 30% $brand_H_secondary_left)
+$brand_secondary_right: lch(60% 30% $brand_H_secondary_right)
+$brand_secondary_light500: lch(30% 10% $brand_H_secondary)
+$brand_secondary_light900: lch(50% 10% $brand_H_secondary)
+
+$brand_accent1: lch(40% 40% $brand_H_primary_right)
+$brand_accent2: lch(40% 40% $brand_H_primary_left)
+$brand_accent1_light900: lch(80% 40% $brand_H_primary_right)
+$brand_accent2_light900: lch(80% 40% $brand_H_primary_left)
+
+$brand_prileft60_secright: color-mix(in lch, $brand_primary_left 60%, $brand_secondary_right)
+$brand_priright60_secleft: color-mix(in lch, $brand_primary_right 60%, $brand_secondary_left)
+
+$brand_prileft_secleft60: color-mix(in lch, $brand_primary_left 40%, $brand_secondary_left)
+$brand_priright_secright60: color-mix(in lch, $brand_primary_right 40%, $brand_secondary_right)
+
+.tbrand_primary
+  background: $brand_primary
+  color: $brand_gray
+.tbrand_primary_left
+  background: $brand_primary_left
+  color: $brand_gray
+.tbrand_primary_right
+  background: $brand_primary_right
+  color: $brand_gray
+.tbrand_secondary
+  background: $brand_secondary
+  color: $brand_gray
+.tbrand_secondary_left
+  background: $brand_secondary_left
+  color: $brand_gray
+.tbrand_secondary_right
+  background: $brand_secondary_right
+  color: black
+.tbrand_accent1
+  background: $brand_accent1
+  color: $brand_gray
+.tbrand_accent2
+  background: $brand_accent2
+  color: $brand_gray
+.tbrand_primary_dark500
+  background: $brand_primary_dark500
+  color: $brand_gray
+.tbrand_primary_dark600
+  background: $brand_primary_dark600
+  color: $brand_gray
+.tbrand_secondary_light500
+  background: $brand_secondary_light500
+  color: $brand_gray
+.tbrand_secondary_light900
+  background: $brand_secondary_light900
+  color: black
+.tbrand_accent1_light900
+  background: $brand_accent1_light900
+  color: black
+.tbrand_accent2_light900
+  background: $brand_accent2_light900
+  color: black
+.tbrand_prileft60_secright
+  background: $brand_prileft60_secright
+  color: $brand_gray
+.tbrand_priright60_secleft
+  background: $brand_priright60_secleft
+  color: $brand_gray
+.tbrand_priright_secright60
+  background: $brand_priright_secright60
+  color: $brand_gray
+.tbrand_prileft_secleft60
+  background: $brand_prileft_secleft60
+  color: $brand_gray
+body
+  padding: 50px
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  text-align: center !important
+  background: $brand_primary
+  color: $brand_gray
+a
+  color: #00B7FF
+.anon-banner
+  color: black
+.card-footer,.card-header
+  background: $brand_primary_right
+.container-bg
+  background: $brand_primary_dark500
+.dropdown-menu,.dropdown-item,.navbar-nav,.nav-item,.dropdown-item:active,.dropdown-item:hover
+  background: $brand_primary
+.dropdown-item:active,.dropdown-item:hover
+  background: $brand_primary_right
+.btn-dragoon
+  background-color: $brand-primary_dark600
+  color: $brand_gray
+.footer-padding
+  height: 5px
+.card-body,.form-control
+  background: $brand_primary
+  color: $brand_gray
+.userid-banner
+  text-align: left
+  font: 11px italic bold san-serif
+  color: $brand_accent2_light900
+.ghetto-report
+  text-align: left
