@@ -28,11 +28,15 @@ I think there is a free 'community' edition and it probably works fine.
 
 VS Code is free.
 
-## Adding Node.js & WebPack
+## Adding Node.js & WebPack & Sass
 
 Recommended: use NVM (https://github.com/nvm-sh/nvm) for managing your Node.js installation.
 
 I've never used NVM on a Windows box, but I assume there is a way to get it to work (e.g. Git for Windows has a Bash).
+
+Sass is simple to use, just remember to compile into CSS. For some reason the Sass pages are plastered with DartVM crap from Google. You don't need DartVM or Dart language to use Sass. It's bizarre.
+
+Webpack is a multi-purpose build tool that also has some limited runtime features, handy for development tasks. I have few examples of webpack config as I normally use Node.js directly, this example being the most commonly used.
 
 ## Configure and Run App
 
