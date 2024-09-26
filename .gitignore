@@ -1,2 +1,6 @@
-.idea
-
+.idea/
+node_modules/
+css/testyle.css
+css/testyle.css.map
+dist/
+package-lock.json
